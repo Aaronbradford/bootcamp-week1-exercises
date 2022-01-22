@@ -10,6 +10,27 @@ const assert = require('assert')
  */
 
 const hasFalsyValue = obj => {
+  let result = false;
+  for (let i = 0; i < Object.values(obj).length; i++) {
+    if (typeof Object.values(obj)[i] == 'object') {
+      result = hasFalsyValue(Object.values(obj)[i]);
+    }
+    else if (Object.values(obj)[i] == false)
+    {
+      result = true;
+    }
+  }
+  return result;
+  // Object.keys(obj).forEach(key => {
+  //   let result = false;
+  //   if (!obj[key]) {
+  //     result = true;
+  //   }
+  //   else {
+  //     hasFalsyValue(obj[key]);
+  //   }
+  // });
+  // return result;
 };
 
 const falsyObj = {
@@ -32,6 +53,8 @@ const truthyObj = {
     anotherTruthy: ";)"
   }
 };
+
+// console.log(hasFalsyValue(falsyObj));
 
 assert(hasFalsyValue(falsyObj) === true);
 assert(hasFalsyValue(truthyObj) === false);

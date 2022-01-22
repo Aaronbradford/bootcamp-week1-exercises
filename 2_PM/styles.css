@@ -1,0 +1,68 @@
+.container {
+   width: 100%;
+}
+.navbar {
+    /* font-size: 100pt; */
+    font-weight: bold;
+    position: sticky;
+    color: white;
+    background-color: #8d8741;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-items: center;
+    /* background-color: #fbeec1; */
+
+}
+.navbar > p {
+    background-color: #daad86;
+}
+body {
+    background-color: #659dbd;
+    color: white;
+}
+
+.navbar > a{
+    /* display: flex;
+    justify-content: space-between; */
+    text-decoration: none;
+    color: white;
+    font-size: 25pt;
+    /* background-color: #8d8741; */
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar > a:hover {
+    font-weight: bold;
+    color:white;
+    background-color: #bc986a;
+}
+.welcome{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    box-shadow: 10px 10px 5px #1a2116;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.movies {
+    background-color: #bc986a;
+}
+.books {
+    background-color: #bc986a;
+}
+table {
+    background-color: #bc986a;
+}
+.songs {
+    background-color: #bc986a;
+}
+.logo {
+    height: 30%;
+    width: 30%;
+}
